@@ -40,12 +40,16 @@
 }
 
 .navbar__menu-item{
+    list-style-type: none;
+}
+
+.navbar__menu-item__btn{
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 24px;
 
-    list-style-type: none;
+    text-decoration: none;
     text-transform: uppercase; /*все буквы становятся заглавными*/
 
     color: #000000;
