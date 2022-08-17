@@ -19,60 +19,73 @@
             </button>
             <a class="navbar__img-logo"><img src="img/logo.png" width="71" height="66" alt="The glass huts"></a>
             <ul class="navbar__menu-list">
-                <li class="navbar__menu-item"><a class="navbar__menu-item__link" href="#">Home</a></li>
+                <li class="navbar__menu-item"><a class="lang--linkk navbar__menu-item__link" href="#">Home</a></li>
                 <li class="navbar__menu-item"><a class="navbar__menu-item__link" href="#">The hut</a></li>
                 <li class="navbar__menu-item"><a class="navbar__menu-item__link" href="#">The area</a></li>
                 <li class="navbar__menu-item"><a class="navbar__menu-item__link" href="#">Booking</a></li>
                 <li class="navbar__menu-item"><a class="navbar__menu-item__link" href="#">About us</a></li>
                 <li class="navbar__menu-item"><a class="navbar__menu-item__link" href="#">Faq</a></li>
             </ul>
-            <a class="lang" href="#"><svg class="lang__checked" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <!-- <select class="change-lang lang">
+                <option value="nob">NOB</option>
+                <option value="ru">RU</option>
+            </select> -->
+
+             <a class="lang" href="#"><svg class="lang__checked" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path id="lang__color" d="M25 4.16675H0V20.833H25V4.16675Z" fill="#D80027"/>
                 <path d="M9.375 4.1665H6.25V10.9378H0V14.063H6.25V20.8343H9.375V14.063H25V10.9378H9.375V4.1665Z" fill="#F0F0F0"/>
                 </svg>
                 </a>
-            <a href="#" class="navbar__btn-book btn">Book now</a>
+            <a href="#" class="lang-btn navbar__btn-book btn">Book now</a> 
         </div>
 
         <!-- Slider main container -->
-    <div class="slider swiper">
-    <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-        <!-- Slides -->
-            <div class="slider-item swiper-slide">
-                <img src="img/house_1.png" height="697" width="1333" alt="First slide" class="sliderImg">
-<!--                 <div class="slider-content">
-                    <p class="slider-header">Find peace in the Forest</p>
-                    <p class="slider-description">Come and stay in out hut hotel near Mariager Fjord in Denmark</p>
-                </div> -->
-            </div>
+        <div class="slider swiper">
+        <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+                <div class="slider-item swiper-slide">
+                    <img src="img/house_1.png" height="697" width="1333" alt="First slide" class="sliderImg">
+    <!--                 <div class="slider-content">
+                        <p class="slider-header">Find peace in the Forest</p>
+                        <p class="slider-description">Come and stay in out hut hotel near Mariager Fjord in Denmark</p>
+                    </div> -->
+                </div>
 
-            <div class="slider-item swiper-slide">
-                <img src="img/house_2.jpg" height="697" width="1333" alt="Second slide" class="sliderImg">
-<!--                 <div class="slider-content">
-                    <p class="slider-header">Find peace in the Forest</p>
-                    <p class="slider-description">Come and stay in out hut hotel near Mariager Fjord in Denmark</p>
-                </div> -->
-            </div>
+                <div class="slider-item swiper-slide">
+                    <img src="img/house_2.jpg" height="697" width="1333" alt="Second slide" class="sliderImg">
+    <!--                 <div class="slider-content">
+                        <p class="slider-header">Find peace in the Forest</p>
+                        <p class="slider-description">Come and stay in out hut hotel near Mariager Fjord in Denmark</p>
+                    </div> -->
+                </div>
 
-            <div class="slider-item swiper-slide">
-                <img src="img/house_3.jpg" height="697" width="1333" alt="Third  slide" class="sliderImg">
-<!--                 <div class="slider-content">
-                    <p class="slider-header">Find peace in the Forest</p>
-                    <p class="slider-description">Come and stay in out hut hotel near Mariager Fjord in Denmark</p>
-                </div> -->
+                <div class="slider-item swiper-slide">
+                    <img src="img/house_3.jpg" height="697" width="1333" alt="Third  slide" class="sliderImg">
+    <!--                 <div class="slider-content">
+                        <p class="slider-header">Find peace in the Forest</p>
+                        <p class="slider-description">Come and stay in out hut hotel near Mariager Fjord in Denmark</p>
+                    </div> -->
+                </div>
             </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        
+            <!-- If we need scrollbar -->
+            <div class="slider-scrollbar swiper-scrollbar swiper-scrollbar-vertical">
+                <div class="slider-drag swiper-scrollbar-drag"></div>
+            </div>    
         </div>
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    
-        <!-- If we need scrollbar -->
-        <div class="slider-scrollbar swiper-scrollbar swiper-scrollbar-vertical">
-            <div class="slider-drag swiper-scrollbar-drag"></div>
-        </div>    
-    </div>
-
+        <div class="price-block price-block-style btn">
+            <a href="#" class="btn-booking ">Book now</a>
+                <div class="price-box">
+                    <p class="price price-small price-position--left">from</p>
+                    <p class="price">€3.200</p>
+                    <p class="price price-small price-position--right">per night</p>
+                </div>
+        </div>
     </div>
 </header>
 
@@ -102,6 +115,9 @@
 </script>
 
 <script src="js/burger.js"></script>
+<script src="js/app.js"></script>
 <script src="js/lang.js"></script>
+<script src="js/yaz.js"></script>
+
 </body>
 </html>
