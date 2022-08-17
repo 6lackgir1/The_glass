@@ -43,7 +43,7 @@
     list-style-type: none;
 }
 
-.navbar__menu-item__btn{
+.navbar__menu-item__link{
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -55,10 +55,13 @@
     color: #000000;
 }
 
-.navbar__denmark{
+.lang{
     margin-top: -18px;
     margin-left: 42px;
 
+}
+path.animate {
+    fill: #000000;
 }
 
 .navbar__btn-book{
@@ -70,73 +73,152 @@
     height: 37px;
 }
 
-#menu__toggle{
-    opacity: 0;
-}
+
+/* Mobile */
+
 
   @media only screen and (max-width: 780px) {
 
-    #menu__toggle {
-        opacity: 0;
-    }
+    .navbar__mobile-navigation{
+        position: relative;
+        z-index: 3;
+        width:64px;
+        height:64px;
+        left:56px;
 
-    #menu__toggle:checked ~ .menu__btn > span {
-        transform: rotate(45deg);
-    }
-
-    #menu__toggle:checked ~ .menu__btn > span::before {
-        top: 0;
-        transform: rotate(0);
-    }
-
-    #menu__toggle:checked ~ .menu__btn > span::after {
-        top: 0;
-        transform: rotate(90deg);
-    }
-
-    #menu__toggle:checked ~ .navbar__menu-list {
-        visibility: visible;
-        left: 0;
-    }
-
-    .menu__btn {
-        display: flex;
-        align-items: center;
-        position: fixed;
-        top: 20px;
-        left: 20px;
-
-        width: 26px;
-        height: 26px;
-
+        transform: translate(-50%, -50%);
+        padding: 0px;
+        background-color:transparent;
+        border-style:none;
+        outline: none;
         cursor: pointer;
-        z-index: 1;
     }
-
-    .menu__btn > span,
-    .menu__btn > span::before,
-    .menu__btn > span::after {
-        display: block;
+    
+    .navbar__mobile-navigation span{
+        display:block;
         position: absolute;
+        width:100%;
+        height:5px;
 
-        width: 100%;
-        height: 2px;
-
-        background-color: #616161;
-
-        transition-duration: .10s;
+        background-color:#e16e83;
+        border-radius: 2px;
+        transition: all 0.5s ease;
     }
-
-    .menu__btn > span::before {
-        content: '';
-        top: -8px;
+    
+    .navbar__mobile-navigation span:nth-child(1){
+        top:0px;
+        left:0px;
     }
-
-    .menu__btn > span::after {
-        content: '';
-        top: 8px;
+    .navbar__mobile-navigation span:nth-child(2){
+        top:20px;
+        right:0px;
     }
+    .navbar__mobile-navigation span:nth-child(3){
+        top:40px;
+        left:0px;
+    }
+    .navbar__mobile-navigation.navbar__mobile-navigation--active span:nth-child(2){
+        animation: span2 1.5s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    }
+    @keyframes span2{
+        0%{
+            transform: translate(0,0) scale(1);
+        }
+        20%{
+            width:5px;
 
+            border-radius: 50%;
+            transform: translate(0,0) scale(1);
+        }
+        40%{
+            width:5px;
+
+            border-radius: 50%;
+            transform: translate(0,0) scale(1);
+        }
+        50%{
+            width:5px;
+
+            border-radius: 50%;
+            transform: translate(0,18px) scale(1); 
+        }
+        80%{
+            width:5px;
+
+            border-radius: 50%;
+            transform: translate(0,-16px) scale(1);
+        }
+        100%{
+            width:5px;
+
+            border-radius: 50%;
+            transform: translate(0,100px) scale(0);
+        }
+    }
+    .navbar__mobile-navigation.navbar__mobile-navigation--active span:nth-child(3){
+        animation: span3 0.5s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        animation-delay: 0.7s;
+    }
+    @keyframes span3{
+        0%{
+            transform: translate(0,0);
+        }
+        60%{
+            transform: rotate(80deg) translate(-7px, -7px);
+        }
+        100%{
+            transform: rotate(45deg) translate(-7px, -7px);
+        }
+    }
+    .navbar__mobile-navigation.navbar__mobile-navigation--active span:nth-child(1){
+        animation: span1 0.5s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+        animation-delay: 1.1s;
+    }
+    @keyframes span1{
+        0%{
+            transform: translate(0,0);
+        }
+        60%{
+            transform: rotate(-110deg) translate(-7px, -7px);
+        }
+        100%{
+            transform: rotate(-45deg) translate(-20px, 20px);
+        }
+    }   
+    .navbar__mobile-navigation span:nth-child(1){
+        animation: span1_close .8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    }
+    @keyframes span1_close {
+        0%{
+            transform: rotate(-45deg) translate(-20px, 20px);
+        }
+        100%{
+            transform: rotate(0deg) translate(0, 0);
+        }
+    }
+    .navbar__mobile-navigation span:nth-child(2){
+        animation: span2_close 0.8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    }
+    @keyframes span2_close{
+        0%{
+            transform: translate(0, 40px) scale(0);
+        }
+        100%{
+            transform: translate(0, 0) scale(1);
+        }
+    }
+    .navbar__mobile-navigation span:nth-child(3){
+        animation: span3_close .8s forwards cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    }
+    @keyframes span3_close{
+        0%{
+            transform: rotate(45deg) translate(-7px, -7px);
+        }
+        100%{
+            transform: rotate(0deg) translate(0, 0);
+        }
+    }
+    
     .navbar__menu-list {
         display: block;
         position: fixed;
@@ -157,6 +239,11 @@
         transition-duration: .20s;
     }
 
+    .navbar__menu-list--open{
+        visibility: visible;
+        z-index: 2;
+    }
+
     .navbar__menu-item {
         display: block;
         padding: 12px 24px;
@@ -167,24 +254,12 @@
     .navbar__menu-item:hover {
         background-color: #CFD8DC;
     }
-
-    .navbar__img-denmark{
-        margin-left: 345px;
-    }
-
-    .navbar__btn-booking{
-        width: 132px;
-        height: 21px;
-        font-size: 12px;
-        margin-top: -30px;
-        padding-top: 10px;
-    }
     
     .navbar__img-logo{
-        margin-left: 35%;
+        margin-left: 29%;
     }
 
-    .navbar__denmark{
-        margin-left: -331px;
-    }
+
+    
+
   }
