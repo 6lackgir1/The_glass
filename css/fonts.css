@@ -5,9 +5,9 @@
     /* Браузер сначала попробует найти шрифт локально */
     src: local("DIN Pro"),
         /* Если не получилось то возьмет из папки*/
-    url("fonts/DINPro/DINpro.woff2") format("woff2"),
+    url("../fonts/DINPro/DINPro.woff2") format("woff2"),
    
-    url("fonts/DINPro/DINpro.woff") format("woff");
+    url("../fonts/DINPro/DINPro.woff") format("woff");
 }
 
 @font-face {
@@ -17,5 +17,5 @@
     /* Браузер сначала попробует найти шрифт локально */
     src: local("Open Sans"),
         /* Если не получилось то возьмет из папки*/
-    url("fonts/Open Sans/OpenSans-Regular.woff2") format("woff2");
+    url("../fonts/Open Sans/OpenSans-Regular.woff2") format("woff2");
 }

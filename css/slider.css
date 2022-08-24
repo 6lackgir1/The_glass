@@ -1,51 +1,14 @@
-.swiper {
-    width: 100%;
-    height: 100%;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-
-  
 .slider-content {
     position: relative;
-    /* Выравнивание текста по горизонтали и по вертикали*/
-    top: -587px;
-    /*transform: translate(-50%, -50%);*/
-    /*Тень*/
+    top: 19px;
+    z-index: 5;
 }
 
 .slider-header{
     position: relative;
-    right: 58px;
+    right: 61px;
+
     font-size: 70px;
-    line-height: 72px;
-    /* identical to box height, or 103% */
     text-align: right;
     color: #FFFFFF;
     text-shadow: 1px 1px 1px #000, 0 0 1em #000;
@@ -53,32 +16,32 @@
 
 .slider-description{
     position: relative;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 28px;
-    /* or 140% */
-
-    text-align: center;
     left: 943px;
     top: -40px;
     width: 328px;
+
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: center;
     color: #FFFFFF;
     text-shadow: 1px 1px 1px #000, 0 0 1em #000;
 }
 
-
 .slider{
-    max-width: 100%;
     position: relative;
     margin: auto;
+    max-width: 100%;
     height: 700px;
     margin-bottom: 15px;
+    margin-top: -297px;
 }
 /* Картинка мастабируется по отношению к родительскому элементу */
 .sliderImg{
-    object-fit: cover;
     width: 100%;
     height: 700px;
+    object-fit: cover;
+
     border: none !important;
     box-shadow: none !important;
 }
@@ -88,10 +51,8 @@
     -webkit-animation-duration: 1.5s;
     animation-name: fade;
     animation-duration: 1.5s;
-}
-
-.swiper-scrollbar-drag {
-    transform: rotate(-90deg);
+    
+    overflow: hidden;
 }
 
 .swiper-button-next::after{
@@ -100,7 +61,6 @@
     right: 640px;
 
     font-size: 20px;
-
     color: #fff;
 }
 
@@ -110,6 +70,34 @@
     left: 640px;
 
     font-size: 20px;
-
     color: #fff;
+}
+
+.slider-scrollbar{
+    background-color: #fff;
+}
+
+/*mobile version*/
+@media only screen and (max-width: 768px) {
+    
+    .slider{
+        margin-top: -213px;
+    }
+
+    .slider-header{
+        right: 61px;
+        font-size: 45px;
+    }
+
+    .slider-description{
+        left: 336px;
+    }
+
+    .swiper-button-next::after{
+        right: 320px;
+    }
+
+    .swiper-button-prev::after{
+        left: 320px;
+    }
 }

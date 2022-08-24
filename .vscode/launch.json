@@ -12,7 +12,7 @@
             "webRoot": "d:\\PhpstormProjects\\booking3\\index.html"
         },
         {
-            "type": "pwa-msedge",
+            "type": "chrome",
             "request": "launch",
             "name": "Open index.html",
             "file": "d:\\PhpstormProjects\\booking3\\index.html"

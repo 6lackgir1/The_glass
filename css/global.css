@@ -6,15 +6,16 @@
 
 
 body {
-    background: #E5E5E5;
     font-family: "DIN", "Arial", sans-serif;
+
+    background: #E5E5E5;
 }
 
 .btn{
-    background: #5B6460;
     color: #ffffff;
-
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    
+    background: #5B6460;
 }
