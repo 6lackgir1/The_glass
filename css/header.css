@@ -42,7 +42,7 @@
 }
 
 .navbar__menu-list{
-    margin-top: -18px;
+    margin-top: -22px;
     margin-right: -167px;
 
     display: flex;
@@ -69,8 +69,9 @@
 
 .navbar__btn-book{
     margin-right: 32px;
-    margin-top: -35px;
-    padding-top: 21px;
+    margin-top: -37px;
+    padding-top: 18px;
+    padding-bottom: 5px;
 
     width: 198px;
     height: 37px;
@@ -99,7 +100,7 @@
 
 .btn-book_now{
     position: absolute;
-    padding-top: 43px;
+    padding-top: 35px;
 
     letter-spacing: 1px;
 }
@@ -132,8 +133,8 @@
 }
 
 .price-small{
-    font-size: 8px;
-    line-height: 21px;
+    font-size: 12px;
+    line-height: 18px;
 }
 
 .price-position--left{

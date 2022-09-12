@@ -1,14 +1,17 @@
 @import "fonts.css";
 @import "header.css";
 @import "slider.css";
-/*@import "main.css";
-@import "footer.css";*/
-
+@import "main.css";
+/*@import "footer.css";*/
 
 body {
     font-family: "DIN", "Arial", sans-serif;
 
     background: #E5E5E5;
+}
+
+:root{
+    --font-open-sans: 'Open Sans', sans-serif;
 }
 
 .btn{
